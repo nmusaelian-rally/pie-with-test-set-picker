@@ -28,7 +28,6 @@
 	    listeners:{
                 ready: function(combobox){
 		    if (combobox.getRecord()) {
-			console.log('ready',combobox.getRecord().get('_ref'));
 			this._onTestSetSelected(combobox.getRecord());
 		    }
 		    else{
@@ -42,7 +41,6 @@
 		    if (combobox.getRecord()) {
 		      if (this.down('#myChart')) {
 			  this.down('#myChart').destroy();
-			  console.log('select',combobox.getRecord().get('_ref'));
 			  this._onTestSetSelected(combobox.getRecord());
 		      }
 			
@@ -57,7 +55,6 @@
      _onTestSetSelected:function(testset){
       this._myMask = new Ext.LoadMask(Ext.getBody(), {msg:"Please wait.This may take long if you have thousands of results..."});
       this._myMask.show();
-	console.log('testset', testset.get('_ref'));
 	this._myStore = Ext.create('Rally.data.WsapiDataStore', {
            model: 'Test Case Result',
 	   limit: Infinity,
@@ -97,7 +94,6 @@
 	  };
 
 	  Ext.Array.each(data, function(record) {
-
 	      verdict = record.get('Verdict');
 	      console.log('verdict',verdict);
 
