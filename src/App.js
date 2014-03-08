@@ -95,8 +95,6 @@
 
 	  Ext.Array.each(data, function(record) {
 	      verdict = record.get('Verdict');
-	      console.log('verdict',verdict);
-
 	      switch(verdict)
 	      {
 		  case "Pass":
@@ -138,7 +136,7 @@
 			    },
 			    tooltip: {
 				formatter: function () {
-				   return this.point.name + ': <b>' + Highcharts.numberFormat(this.percentage, 1) + '%</b>';
+				   return this.point.name + ': <b>' + Highcharts.numberFormat(this.percentage, 1) + '%</b><br />' + this.point.y;
 				    }
 			    },
 			    plotOptions : {

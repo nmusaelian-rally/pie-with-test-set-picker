@@ -1,8 +1,8 @@
-TestCaseResults Pie with TestSet picker 
+Test Case Result Verdicts filtered by Iteration and TestSet
 =========================
 
 ## Overview
-Test Case Results by Verdict
+
 ![](pic.png)
 
 
