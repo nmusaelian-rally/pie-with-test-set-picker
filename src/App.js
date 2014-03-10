@@ -58,7 +58,7 @@
 	this._myStore = Ext.create('Rally.data.WsapiDataStore', {
            model: 'Test Case Result',
 	   limit: Infinity,
-           fetch: true,
+           fetch: ['Verdict','TestCase','Build'],
 	   filters:[
 	    {
 	      property: 'TestSet',
